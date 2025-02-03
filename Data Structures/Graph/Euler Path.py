@@ -50,18 +50,17 @@ def eulerian_path(graph, start_node=None):
 
     return path[::-1]
 
-# Example usage:
-if __name__ == "__main__":
-    # Sample graph represented as an adjacency list
-    sample_graph = {
-        'A': ['B', 'C', 'D'],
-        'B': ['A', 'C', 'D'],
-        'C': ['A', 'B'],
-        'D': ['A', 'B']
-    }
 
-    if is_eulerian(sample_graph):
-        path = eulerian_path(sample_graph)
-        print("Eulerian Path:", path)
-    else:
-        print("No Eulerian Path exists in the given graph.")
+# Sample graph represented as an adjacency list
+sample_graph = {
+    'A': ['B', 'C', 'D'],
+    'B': ['A', 'C', 'D'],
+    'C': ['A', 'B'],
+    'D': ['A', 'B']
+}
+
+if is_eulerian(sample_graph):
+    path = eulerian_path(sample_graph)
+    print("Eulerian Path:", path)
+else:
+    print("No Eulerian Path exists in the given graph.")
