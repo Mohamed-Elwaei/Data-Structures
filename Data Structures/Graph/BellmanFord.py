@@ -25,26 +25,26 @@ def bellman_ford(graph, source):
     return distance, path
 
     
-if __name__ == '__main__':
-    graph = {
-        'a': {'b': -1, 'c':  4},
-        'b': {'c':  3, 'd':  2, 'e':  2},
-        'c': {},
-        'd': {'b':  1, 'c':  5},
-        'e': {'d': -3}
-    }
 
-    distance, predecessor = bellman_ford(graph, source='a')
+graph = {
+    'a': {'b': -1, 'c':  4},
+    'b': {'c':  3, 'd':  2, 'e':  2},
+    'c': {},
+    'd': {'b':  1, 'c':  5},
+    'e': {'d': -3}
+}
 
-    print(distance)
-    print(predecessor)
-    graph = {
-        'a': {'c': 3},
-        'b': {'a': 2},
-        'c': {'b': 7, 'd': 1},
-        'd': {'a': 6},
-    }
- 
-    distance, predecessor = bellman_ford(graph, source='a')
+distance, predecessor = bellman_ford(graph, source='a')
 
-    print(distance)
+print(distance)
+print(predecessor)
+graph = {
+    'a': {'c': 3},
+    'b': {'a': 2},
+    'c': {'b': 7, 'd': 1},
+    'd': {'a': 6},
+}
+
+distance, predecessor = bellman_ford(graph, source='a')
+
+print(distance)
